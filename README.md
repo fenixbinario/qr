@@ -1,0 +1,2 @@
+# qr
+Generador QR
