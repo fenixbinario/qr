@@ -1,4 +1,4 @@
-console.log("Hello 🌎");
+console.log("Hello 🌎 QR Free");
 
 // Fuente: https://davidshimjs.github.io/qrcodejs/
 
