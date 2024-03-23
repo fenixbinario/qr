@@ -1,76 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
     <script src="//cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://raw.githubusercontent.com/fenixbinario/fenixbinario.com/master/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
     <title>Hello QR!</title>
-
-    <!-- Meta tags for SEO and social sharing -->
     <link rel="canonical" href="https://qr.fenixbinario.com/" />
-    <meta
-      name="description"
-      content="A simple website, built with FenixReload."
-    />
+    <meta name="description" content="A simple website, built with FenixReload." />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="QR Generator!" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://fenixbinario.com/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with FenixReload."
-    />
-
-    <!-- Import the webpage's stylesheet -->
+    <meta property="og:description" content="A simple website, built with FenixReload." />
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Import the webpage's javascript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.5.2/jscolor.min.js"></script>
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
-
-    <!-- The wrapper and content divs set margins and positioning -->
+  <body onload="">
     <div class="wrapper">
       <div class="content" role="main">
-        <!-- This is the start of content for our page -->
         <h1 class="title">Hello QR!</h1>
-        
-        <!-- Instructions on using this project -->
         <div class="instructions">
-          <h2>
-            Generador <strong>QR</strong> gratis
-          </h2>
+          <h2>Generador <strong>QR</strong> gratis</h2>
           <a href="https://github.com/fenixbinario/qr">Código fuente</a>
-          <p>
-            Seguidamente debes escanearlo para comprobar que funciona.
-          </p>
-          <!-- ADD BUTTON HERE -->
-        <input id="text" type="text" value="https://qr.fenixbinario.com" style="width:80%" /><br />
-        <div id="qrcode"></div>
-          
-        <br>
-          <!-- Once you've added the button from the readme, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+          <p>Seguidamente debes escanearlo para comprobar que funciona.</p>
+          <!-- Entrada de texto para el contenido del QR -->
+          <input id="text" type="text" value="Poner aqui texto para generar QR"  placeholder="Poner aqui texto para generar QR" style="width:100%" />      
+          <br />
+          <input id="bgColor" value="#FFffff" data-jscolor="{palette:'#fff #ccc #999 #666 #333 #000'}" style="width:130px">
+          <br>
+          <input id="pxColor" value="#2800FF" data-jscolor="{palette:'#fff #ccc #999 #666 #333 #000'}" style="width:130px">
+          <br>
+          <!-- Botón para descargar el QR -->
+          <button class="btn--remix" id="downloadBtn" style="width:100%">Descargar QR</button>
+          <br><!-- Aquí se mostrará el QR -->
+          <div id="qrcode" style="width:80%"></div>
+          <br>
         </div>
       </div>
     </div>
